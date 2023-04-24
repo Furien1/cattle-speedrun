@@ -7,6 +7,13 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
+      // {
+      //   path: 'belepes',
+      //   loadChildren: () =>
+      //     import('./modules/login/login.module').then(
+      //       (m) => m.LoginModule
+      //     ),
+      // },
       {
         path: '',
         loadChildren: () =>
