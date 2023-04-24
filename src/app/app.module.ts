@@ -1,26 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {
+  HTTP_INTERCEPTORS,
+  HttpClient,
+  HttpClientModule,
+} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './shared/modules/button/button.component';
-import { TypographyComponent } from './shared/modules/typography/typography.component';
 import { ExplicitTableComponent } from './shared/modules/explicit-table/explicit-table.component';
 
+// Material
+import { LayoutModule } from './layout/layout.module';
 @NgModule({
-  declarations: [
-    AppComponent,
-    ButtonComponent,
-    TypographyComponent,
-    ExplicitTableComponent
-  ],
+  declarations: [AppComponent, ButtonComponent, ExplicitTableComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
