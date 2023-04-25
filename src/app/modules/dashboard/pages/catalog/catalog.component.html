@@ -1,6 +1,6 @@
 <app-heading1>{{ "Katalógus" }}</app-heading1>
 
-<div style="overflow: scroll; height: 60vh">
+<div style="overflow-y: scroll; height: 70vh">
   <app-explicit-table [data]="catalogItems">
     <ng-container>
       <ng-template #headers>
@@ -15,6 +15,23 @@
         <th>{{ "NEM" }}</th>
         <th>{{ "NEM" }}</th>
         <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
+        <th>{{ "NEM" }}</th>
       </ng-template>
       <ng-template #rows let-row>
         <td>{{ row.id }}</td>
@@ -22,8 +39,25 @@
         <td>{{ row.quantity }}</td>
         <td>{{ row.price }}</td>
         <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
+        <td>{{ row.dryMatter }}</td>
         <td>{{ row.rawProtein }}</td>
         <td>{{ row.MFE }}</td>
+        <td>{{ row.MFN }}</td>
+        <td>{{ row.MFN }}</td>
+        <td>{{ row.MFN }}</td>
+        <td>{{ row.MFN }}</td>
+        <td>{{ row.MFN }}</td>
+        <td>{{ row.MFN }}</td>
         <td>{{ row.MFN }}</td>
         <td>{{ row.NEM }}</td>
         <td>{{ row.NEM }}</td>
