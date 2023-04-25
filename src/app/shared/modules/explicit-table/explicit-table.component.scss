@@ -1,0 +1,46 @@
+/* stylelint-disable no-descending-specificity */
+::ng-deep {
+  .exp-table {
+    thead tr,
+    tbody tr {
+      border-bottom-width: 0;
+    }
+
+    tr {
+      td {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #bebebe;
+      }
+    }
+
+    thead tr {
+      &:last-of-type {
+        margin-top: -9px;
+
+        th {
+          padding-bottom: 16px;
+          border-bottom-color: var(--brand);
+          border-bottom-width: 2px;
+        }
+      }
+    }
+
+    th,
+    td {
+      &:first-of-type {
+        padding-left: 16px;
+      }
+
+      &:last-of-type {
+        padding-right: 16px;
+      }
+
+      padding: 16px 8px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.bg-background-light-04 {
+  background: #e66060;
+}

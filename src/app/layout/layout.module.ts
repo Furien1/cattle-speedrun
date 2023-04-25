@@ -11,6 +11,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCommonModule } from '@angular/material/core';
 import { RouterModule } from '@angular/router';
+import { ButtonModule } from '../shared/modules/button/button.module';
+import { TypographyModule } from '../shared/modules/typography/typography.module';
 @NgModule({
   declarations: [
     LayoutComponent,
@@ -24,7 +26,8 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     MatCommonModule,
     RouterModule,
+    ButtonModule,
+    TypographyModule,
   ],
-  exports: [MatSidenavModule, MatListModule, MatCommonModule],
 })
 export class LayoutModule {}

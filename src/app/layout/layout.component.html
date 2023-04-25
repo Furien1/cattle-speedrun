@@ -1,12 +1,22 @@
 <div class="main--layout">
-  <app-header (toggleSidenav)="drawer.toggle()"></app-header>
+  <div style="height: 100px">
+    <app-header (toggleSidenav)="drawer.toggle()"></app-header>
+  </div>
 
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
-      <a [routerLink]="['katalogus']">Katalógus</a>
-      <a [routerLink]="['marha-csoportok']">Marha csoportok</a>
-      <a [routerLink]="['szuksegletek']">Szükségletek</a>
-      <a [routerLink]="['adag-listak']">Adag listák</a>
+      <a [routerLink]="['katalogus']">
+        <app-heading2>Katalógus</app-heading2>
+      </a>
+      <a [routerLink]="['marha-csoportok']">
+        <app-heading2>Marha csoportok</app-heading2>
+      </a>
+      <a [routerLink]="['szuksegletek']">
+        <app-heading2>Szükségletek</app-heading2>
+      </a>
+      <a [routerLink]="['adag-listak']">
+        <app-heading2>Adag listák</app-heading2>
+      </a>
     </mat-drawer>
 
     <div class="example-sidenav-content">

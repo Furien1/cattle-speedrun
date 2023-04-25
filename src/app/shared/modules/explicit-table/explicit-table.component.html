@@ -1,1 +1,42 @@
-<p>explicit-table works!</p>
+<ng-container *ngIf="data">
+  <table class="exp-table min-w-full text-sm">
+    <thead>
+      <tr
+        class="bg-background-light-04 py-3 text-left font-bold text-text-dark"
+      >
+        <ng-container
+          *ngTemplateOutlet="
+            headers || defaultHeaderTemplate;
+            context: { $implicit: data }
+          "
+        ></ng-container>
+      </tr>
+    </thead>
+    <tbody *ngIf="data.length">
+      <tr
+        *ngFor="let row of data; index as idx"
+        class="h-table-row leading-5 text-center"
+      >
+        <ng-container
+          *ngTemplateOutlet="
+            rows || defaultRowTemplate;
+            context: { $implicit: row, idx: idx }
+          "
+        ></ng-container>
+      </tr>
+    </tbody>
+    <tbody *ngIf="!data.length">
+      <tr>
+        <td>No data provided</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- If no template is provided -->
+  <ng-template #defaultHeaderTemplate let-data>
+    <p>No data provided</p>
+  </ng-template>
+  <ng-template #defaultRowTemplate>
+    <p>No data provided</p>
+  </ng-template>
+</ng-container>

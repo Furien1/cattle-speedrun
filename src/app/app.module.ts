@@ -8,13 +8,11 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonComponent } from './shared/modules/button/button.component';
-import { ExplicitTableComponent } from './shared/modules/explicit-table/explicit-table.component';
 
 // Material
 import { LayoutModule } from './layout/layout.module';
 @NgModule({
-  declarations: [AppComponent, ButtonComponent, ExplicitTableComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

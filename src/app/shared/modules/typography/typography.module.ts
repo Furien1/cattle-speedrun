@@ -7,8 +7,6 @@ import { Heading2Component } from './heading2/heading2.component';
 import { ButtonTextSComponent } from './button-text-s/button-text-s.component';
 import { ButtonTextLComponent } from './button-text-l/button-text-l.component';
 
-
-
 @NgModule({
   declarations: [
     Body1Component,
@@ -16,10 +14,16 @@ import { ButtonTextLComponent } from './button-text-l/button-text-l.component';
     Heading1Component,
     Heading2Component,
     ButtonTextSComponent,
-    ButtonTextLComponent
+    ButtonTextLComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
+  exports: [
+    Body1Component,
+    Body2Component,
+    Heading1Component,
+    Heading2Component,
+    ButtonTextSComponent,
+    ButtonTextLComponent,
+  ],
 })
-export class TypographyModule { }
+export class TypographyModule {}

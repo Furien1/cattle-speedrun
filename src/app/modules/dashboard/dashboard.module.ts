@@ -2,23 +2,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { CatalogComponent } from './pages/catalog/catalog.component';
-import { CattleGroupsComponent } from './pages/cattle-groups/cattle-groups.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { PortionListsComponent } from './pages/portion-lists/portion-lists.component';
-import { PortionManagerComponent } from './pages/portion-manager/portion-manager.component';
 import { TypographyModule } from 'src/app/shared/modules/typography/typography.module';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeModule } from './pages/home/home.module';
+import { CatalogModule } from './pages/catalog/catalog.module';
+import { PortionManagerModule } from './pages/portion-manager/portion-manager.module';
+import { PortionListsModule } from './pages/portion-lists/portion-lists.module';
+import { CattleGroupsModule } from './pages/cattle-groups/cattle-groups.module';
 
 @NgModule({
-  declarations: [
-    CatalogComponent,
-    CattleGroupsComponent,
-    NotFoundComponent,
-    PortionListsComponent,
-    PortionManagerComponent,
-    HomeComponent,
+  declarations: [NotFoundComponent],
+  imports: [
+    CommonModule,
+    DashboardRoutingModule,
+    TypographyModule,
+    HomeModule,
+    PortionManagerModule,
+    PortionListsModule,
+    CattleGroupsModule,
+    TypographyModule,
   ],
-  imports: [CommonModule, DashboardRoutingModule, TypographyModule],
 })
 export class DashboardModule {}

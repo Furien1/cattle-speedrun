@@ -1,6 +1,6 @@
 .main {
   &--layout {
-    height: 90%;
+    height: calc(100% - 100px);
   }
 }
 
@@ -11,15 +11,19 @@
 }
 
 .example-sidenav-content {
-  display: flex;
   height: 100%;
-  align-items: center;
-  justify-content: center;
+  padding: 25px;
 }
 
 .example-sidenav {
   padding: 20px;
+  width: 25vw;
   a {
     display: block;
+    text-decoration: none;
   }
+}
+
+.mat-drawer-container {
+  background-color: #fff;
 }
